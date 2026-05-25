@@ -35,6 +35,13 @@
 			.header-text-side {
 				text-align: left;
 			}
+			/* Custom subpage navigation styling */
+			.subpage-nav {
+				margin-top: 20px;
+			}
+			.subpage-nav .button {
+				margin: 5px;
+			}
 			@media screen and (max-width: 736px) {
 				.header-text-side {
 					text-align: center;
@@ -54,9 +61,11 @@
 						<img src="images/profile.jpg" alt="Naga Sai" class="profile-pic" onerror="this.style.display='none';" />
 					</div>
 					<br />
-					<ul class="actions special">
-						<li><a href="#one" class="button scrolly">Explore Portfolio</a></li>
-					</ul>
+					
+					<div class="subpage-nav">
+						<a href="#one" class="button scrolly">Explore Home</a>
+						<a href="gallery.html" class="button primary">View Gallery Subpage</a>
+					</div>
 				</div>
 			</section>
 
