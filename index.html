@@ -8,13 +8,41 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		
 		<style>
-			/* Luxury Dark Mode Baseline */
-			.main.style1 {
-				background-color: #1a1d20 !important;
+			/* Full Site Pure Dark Background Overrides */
+			body {
+				background-color: #111416 !important;
 				color: #cbd5e1 !important;
 			}
-			.main.style1 h2, .main.style1 h3 {
+			
+			#header {
+				background-image: linear-gradient(rgba(17, 20, 22, 0.85), rgba(17, 20, 22, 0.95)), url("images/header.jpg") !important;
+				background-color: #111416 !important;
+			}
+
+			.main.style1 {
+				background-color: #16191c !important;
+				color: #cbd5e1 !important;
+				border-top: 1px solid rgba(229, 169, 59, 0.1);
+				border-bottom: 1px solid rgba(229, 169, 59, 0.1);
+			}
+
+			.main.style2 {
+				background-color: #111416 !important;
+				color: #cbd5e1 !important;
+			}
+			
+			#footer {
+				background-color: #0b0d0e !important;
+				border-top: 1px solid rgba(229, 169, 59, 0.1);
+			}
+
+			/* Typography Enhancements */
+			h1, h2, h3, h4, strong {
 				color: #ffffff !important;
+			}
+			
+			h2 strong, h1 strong {
+				color: #e5a93b !important; /* Gold focal points */
 			}
 			
 			/* Header Profile Layout */
@@ -29,25 +57,26 @@
 			.profile-pic {
 				width: 130px;
 				height: 130px;
-				border-radius: 50%; /* Rounded profile for an elegant look */
+				border-radius: 50%;
 				object-fit: cover;
-				border: 3px solid #e5a93b; /* Luxury gold accent border matching your business card */
-				box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+				border: 3px solid #e5a93b; /* Luxury gold matching your card */
+				box-shadow: 0 8px 24px rgba(0,0,0,0.6);
 			}
 			.header-text-side {
 				text-align: left;
 			}
 			
-			/* Premium Quote Highlights */
-			.premium-quote {
+			/* Premium Passion Quote Block */
+			.passion-statement {
 				font-style: italic;
 				font-family: "Georgia", serif;
 				color: #e5a93b !important;
-				font-size: 1.25em;
+				font-size: 1.35em;
 				line-height: 1.6em;
-				border-left: 3px solid #e5a93b;
+				border-left: 4px solid #e5a93b;
 				padding-left: 20px;
-				margin: 25px 0;
+				margin: 30px 0;
+				text-align: left;
 			}
 			
 			/* Service List Grid Layout */
@@ -68,14 +97,30 @@
 				position: relative;
 				margin-bottom: 0.8em;
 				font-size: 1.05em;
-				letter-spacing: 0.5px;
+				color: #e2e8f0;
 			}
 			.services-grid li::before {
 				content: "✓";
-				color: #e5a93b; /* Gold checkmark */
+				color: #e5a93b;
 				font-weight: bold;
 				position: absolute;
 				left: 0;
+			}
+
+			/* Button Upgrades */
+			.button.primary {
+				background-color: #e5a93b !important;
+				box-shadow: none !important;
+				color: #111416 !important;
+				font-weight: bold;
+			}
+			.button.primary:hover {
+				background-color: #cca43b !important;
+			}
+			
+			.button {
+				box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2) !important;
+				color: #ffffff !important;
 			}
 			
 			@media screen and (max-width: 736px) {
@@ -85,8 +130,8 @@
 				.services-grid {
 					grid-template-columns: 1fr;
 				}
-				.premium-quote {
-					font-size: 1.1em;
+				.passion-statement {
+					font-size: 1.15em;
 					padding-left: 15px;
 				}
 			}
@@ -99,14 +144,13 @@
 					<div class="header-profile-container">
 						<div class="header-text-side">
 							<h1>Hi, I'm <strong>K. Naga Sai</strong></h1>
-							<p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.85em; color: #cbd5e1;">Professional Photography & Videography Portfolio</p>
+							<p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.85em; color: #e5a93b;">Professional Photography & Videography Portfolio</p>
 						</div>
 						<img src="images/profile.jpg" alt="Naga Sai" class="profile-pic" onerror="this.style.display='none';" />
 					</div>
 					<br />
-					
 					<ul class="actions special">
-						<li><a href="#one" class="button scrolly">Explore Portfolio</a></li>
+						<li><a href="#one" class="button scrolly">Explore Production Portfolio</a></li>
 					</ul>
 				</div>
 			</section>
@@ -116,16 +160,17 @@
 					<div class="row gtr-150">
 						<div class="col-6 col-12-medium">
 							<header class="major">
-								<h2>Capturing Your Most<br />
-								Beautiful Moments</h2>
+								<h2>From Pure Passion To <br /><strong>Master Production</strong></h2>
 							</header>
-							<blockquote class="premium-quote">
-								"Photography is the story I fail to put into words. Every single frame is an art piece designed to outlast time itself."
-							</blockquote>
-							<p>Welcome to my professional production portfolio. I specialize in high-end cinematic videography and storytelling digital photography that preserves your landmark memories. From spectacular, grand-scale events to deep, raw emotional portraiture, every frame is meticulously styled, directed, and professionally master-edited.</p>
+							
+							<div class="passion-statement">
+								"What started purely as a deep passion has become my lifelong career. With years of elite field experience and a highly skilled professional production staff, we transform your moments into cinematic masterpieces."
+							</div>
+							
+							<p>We believe unmatched production value shouldn't be out of reach. Backed by extensive industry experience, our crew seamlessly handles custom projects tailored completely to your client criteria. Whatever your vision or budget baseline, we configure dynamic packages to secure premium, ultra-high-definition 4K outputs without compromise.</p>
 						</div>
 						<div class="col-6 col-12-medium imp-medium" style="display: flex; justify-content: center; align-items: center;">
-							<span class="image fit" style="max-width: 400px; filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.5));"><img src="images/logo.png" alt="Naga Sai Photography Logo" /></span>
+							<span class="image fit" style="max-width: 400px; filter: drop-shadow(0px 15px 30px rgba(0,0,0,0.7));"><img src="images/logo.png" alt="Naga Sai Photography Logo" /></span>
 						</div>
 					</div>
 				</div>
@@ -136,19 +181,19 @@
 					<div class="row gtr-150">
 						<div class="col-6 col-12-medium">
 							<ul class="major-icons">
-								<li><span class="icon solid style1 major fa-camera"></span></li>
-								<li><span class="icon solid style2 major fa-bolt"></span></li>
-								<li><span class="icon solid style3 major fa-video"></span></li>
-								<li><span class="icon solid style4 major fa-heart"></span></li>
-								<li><span class="icon solid style5 major fa-desktop"></span></li>
-								<li><span class="icon solid style6 major fa-images"></span></li>
+								<li><span class="icon solid style1 major fa-camera" style="color: #e5a93b;"></span></li>
+								<li><span class="icon solid style2 major fa-bolt" style="color: #e5a93b;"></span></li>
+								<li><span class="icon solid style3 major fa-video" style="color: #e5a93b;"></span></li>
+								<li><span class="icon solid style4 major fa-heart" style="color: #e5a93b;"></span></li>
+								<li><span class="icon solid style5 major fa-desktop" style="color: #e5a93b;"></span></li>
+								<li><span class="icon solid style6 major fa-images" style="color: #e5a93b;"></span></li>
 							</ul>
 						</div>
 						<div class="col-6 col-12-medium">
 							<header class="major">
-								<h2>Premium Services & Production</h2>
+								<h2>Elite Team & Service Framework</h2>
 							</header>
-							<p>We supply a comprehensive range of media production setups customized to elite criteria. Utilizing high-performance gear, dynamic lighting arrays, and master-level editing environments like After Effects, we lock in unmatched clarity and vibrancy.</p>
+							<p>Our handpicked staff of expert photographers, videographers, and editors utilize specialized workflows across advanced environments like After Effects. We operate smoothly on high-intensity sets to promise perfectly timed, breathtaking captures.</p>
 							
 							<div class="services-grid">
 								<ul>
@@ -174,26 +219,26 @@
 		<section id="three" class="main style1 special">
 				<div class="container">
 					<header class="major">
-						<h2>Featured Gallery Highlights</h2>
+						<h2>Featured Production Works</h2>
 					</header>
 					<p style="max-width: 700px; margin: 0 auto 3em auto; font-style: italic; color: #a1a1a1;">
-						"We do not take pictures with a camera. We bring to the act of photography all the books you have read, the movies you have seen, the music you have heard, and the people you have loved."
+						"We do not simply frame raw images. We mix your personal energy, emotion, and love stories into dynamic art pieces."
 					</p>
 					<div class="row gtr-150">
 						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/pic02.jpg" alt="Pre-wedding Showcase" /></span>
+							<span class="image fit" style="box-shadow: 0 10px 30px rgba(0,0,0,0.5);"><img src="images/pic02.jpg" alt="Pre-wedding" /></span>
 							<h3>Pre-Wedding Shoots</h3>
-							<p>Cinematic outdoor music films and stylized, cinematic romance lookbooks.</p>
+							<p>Cinematic outdoor storytelling music clips and romantic layout packages.</p>
 						</div>
 						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/pic03.jpg" alt="Event Photography" /></span>
+							<span class="image fit" style="box-shadow: 0 10px 30px rgba(0,0,0,0.5);"><img src="images/pic03.jpg" alt="Event Coverage" /></span>
 							<h3>Traditional & Events</h3>
-							<p>Flawless full-coverage event logging that extracts crisp, true emotional colors.</p>
+							<p>Comprehensive layout tracking that locks in crisp colors and deep, raw feelings.</p>
 						</div>
 						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/pic04.jpg" alt="Cinematography" /></span>
+							<span class="image fit" style="box-shadow: 0 10px 30px rgba(0,0,0,0.5);"><img src="images/pic04.jpg" alt="Cinematography" /></span>
 							<h3>4K Cinematography</h3>
-							<p>Creative direction aligning with high production standards and advanced frame mastering.</p>
+							<p>Creative camera sets designed to hit standard agency quality and high-tier master framing.</p>
 						</div>
 					</div>
 				</div>
@@ -202,14 +247,14 @@
 		<section id="four" class="main style2 special">
 				<div class="container">
 					<header class="major">
-						<h2>Let's Co-Create Your Vision</h2>
+						<h2>Commission Your Custom Package</h2>
 					</header>
-					<p>Ready to commission high-end video sets or book an exclusive reservation for an upcoming project?</p>
+					<p>Ready to collaborate with an experienced crew? Connect with our professional workers today to secure dates and build a plan around your budget specifications.</p>
 					
-					<p style="line-height: 2em; margin-bottom: 2.5em; font-size: 1.1em;">
-						<strong>📞 Direct Line:</strong> +91 81431 43557<br />
-						<strong>✉️ Digital Mail:</strong> nagasaiphotography557@gmail.com<br />
-						<strong>📍 Studio Base:</strong> Kadiyapulanka, Kadiyam(M), E.G.Dist., A.P.
+					<p style="line-height: 2.2em; margin-bottom: 2.5em; font-size: 1.1em; color: #f8fafc;">
+						<strong>📞 Direct Booking Line:</strong> +91 81431 43557<br />
+						<strong>✉️ Corporate Email:</strong> nagasaiphotography557@gmail.com<br />
+						<strong>📍 Operations Base:</strong> Kadiyapulanka, Kadiyam(M), E.G.Dist., A.P.
 					</p>
 					
 					<ul class="actions special">
