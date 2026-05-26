@@ -42,9 +42,37 @@
 			.subpage-nav .button {
 				margin: 5px;
 			}
+			/* Service List Grid Layout */
+			.services-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 10px;
+				margin-top: 15px;
+				text-align: left;
+			}
+			.services-grid ul {
+				list-style: none;
+				padding-left: 0;
+				margin: 0;
+			}
+			.services-grid li {
+				padding-left: 1.5em;
+				position: relative;
+				margin-bottom: 0.5em;
+			}
+			.services-grid li::before {
+				content: "•";
+				color: #e5a93b; /* Gold dot matching your card */
+				font-weight: bold;
+				position: absolute;
+				left: 0;
+			}
 			@media screen and (max-width: 736px) {
 				.header-text-side {
 					text-align: center;
+				}
+				.services-grid {
+					grid-template-columns: 1fr;
 				}
 			}
 		</style>
@@ -55,7 +83,7 @@
 				<div class="inner">
 					<div class="header-profile-container">
 						<div class="header-text-side">
-							<h1>Hi, I'm <strong>Naga Sai</strong></h1>
+							<h1>Hi, I'm <strong>K. Naga Sai</strong></h1>
 							<p>Professional Photography & Videography Portfolio</p>
 						</div>
 						<img src="images/profile.jpg" alt="Naga Sai" class="profile-pic" onerror="this.style.display='none';" />
@@ -103,9 +131,24 @@
 							<header class="major">
 								<h2>Our Services & Expertise</h2>
 							</header>
-							<p>We provide a complete range of media services tailored to your exact needs. Using high-end equipment and advanced editing techniques, we deliver premium results that stand out.</p>
-							<p><strong>Pre-Wedding Shoots:</strong> Creating beautiful, romantic, and cinematic pre-wedding videos and outdoor photoshoots that reflect your love story perfectly.</p>
-							<p><strong>Professional Editing:</strong> Expert post-processing and cinematic editing across After Effects and top industry tools to guarantee crystal clear, vibrant 4K quality outputs.</p>
+							<p>We provide a complete range of professional media services tailored to your exact needs. Using high-end equipment and advanced editing techniques across After Effects, we deliver premium results that stand out.</p>
+							
+							<div class="services-grid">
+								<ul>
+									<li>Wedding</li>
+									<li>Pre wedding</li>
+									<li>Post wedding</li>
+									<li>Outdoor</li>
+									<li>Indoor</li>
+								</ul>
+								<ul>
+									<li>Cinematic</li>
+									<li>Candid</li>
+									<li>Maternity</li>
+									<li>Kids</li>
+									<li>Commercial</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -143,7 +186,13 @@
 						<h2>Let's Plan Your Next Shoot</h2>
 					</header>
 					<p>Are you looking to book a photographer or cinematic video session? Contact us today to check availability!</p>
-					<p><strong>Mobile:</strong> +91 81431 43557</p>
+					
+					<p style="line-height: 1.8em; margin-bottom: 2em;">
+						<strong>📞 Mobile:</strong> +91 81431 43557<br />
+						<strong>✉️ Email:</strong> nagasaiphotography557@gmail.com<br />
+						<strong>📍 Location:</strong> Kadiyapulanka, Kadiyam(M), E.G.Dist., A.P.
+					</p>
+					
 					<ul class="actions special">
 						<li><a href="tel:8143143557" class="button wide primary">Call Now</a></li>
 					</ul>
